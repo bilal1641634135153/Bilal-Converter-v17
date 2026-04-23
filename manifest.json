@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "محول الزعيم v17",
+  "version": "1.0",
+  "description": "تحويل ذكي بين العربي والفرنسي (نسخة الزعيم الاحترافية)",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "512": "icon.png"
+  },
+  "permissions": []
+}
