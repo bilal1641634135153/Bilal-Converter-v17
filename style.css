@@ -1,0 +1,19 @@
+.zaim-suggestion {
+    position: absolute;
+    background: #1e1e1e;
+    color: #00d1ff;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #00d1ff;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    font-family: sans-serif;
+    transition: transform 0.2s;
+}
+.zaim-suggestion:hover {
+    transform: scale(1.05);
+    background: #00d1ff;
+    color: #121212;
+}

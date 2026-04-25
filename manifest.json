@@ -1,14 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "محول الزعيم v17",
-  "version": "1.0",
-  "description": "تحويل ذكي بين العربي والفرنسي (نسخة الزعيم الاحترافية)",
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
+  "name": "محول الزعيم v20",
+  "version": "1.3",
+  "action": { "default_popup": "popup.html" },
+  "background": { "service_worker": "background.js" },
+  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "commands": {
+    "run-transform": {
+      "suggested_key": { "default": "Ctrl+Shift+X" },
+      "description": "تحويل النص المظلل فوراً"
+    }
   },
-  "icons": {
-    "512": "icon.png"
-  },
-  "permissions": []
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "icons": { "512": "icon.png" }
 }
