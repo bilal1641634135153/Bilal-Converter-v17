@@ -1,21 +1,24 @@
 {
   "manifest_version": 3,
-  "name": "محول الزعيم v20",
-  "version": "1.3",
+  "name": "محول الزعيم v23",
+  "version": "2.3",
   "action": { "default_popup": "popup.html" },
   "background": { "service_worker": "background.js" },
   "permissions": ["contextMenus", "scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
   "commands": {
     "run-transform": {
       "suggested_key": { "default": "Ctrl+Shift+X" },
-      "description": "تحويل النص المظلل فوراً"
+      "description": "تحويل النص بالكامل فوراً"
     }
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
-      "css": ["style.css"]
+      "css": ["style.css"],
+      "run_at": "document_end",
+      "all_frames": true
     }
   ],
   "icons": { "512": "icon.png" }
